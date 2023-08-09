@@ -100,7 +100,6 @@ TEST_F(RoutePlannerTest, TestConstructFinalPath) {
     end_node->parent = mid_node;
     std::vector<RouteModel::Node> path = route_planner.ConstructFinalPath(end_node);
 
-    // Test the path.
     EXPECT_EQ(path.size(), 3);
     EXPECT_FLOAT_EQ(start_node->x, path.front().x);
     EXPECT_FLOAT_EQ(start_node->y, path.front().y);
